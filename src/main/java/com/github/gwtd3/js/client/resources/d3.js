@@ -1222,7 +1222,7 @@
           dy = position1[1] - position0[1];
           dragged |= dx | dy;
           position0 = position1;
-          dispatch({
+          if (dragged) dispatch({
             type: "drag",
             x: position1[0] + dragOffset[0],
             y: position1[1] + dragOffset[1],
